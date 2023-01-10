@@ -1,0 +1,63 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/ELEC241/DigitalSystems/tasks/Task204-LogicLevels/simulation/modelsim
+vcomb_logic
+Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+Z2 !s110 1673285526
+!i10b 1
+!s100 ]oEXJhT:8j1cUiPdmDZmz3
+Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IEiPM^Uh7Z6QL[YS;J`>9W0
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+S1
+R0
+Z5 w1673285460
+Z6 8comb_logic.svo
+Z7 Fcomb_logic.svo
+!i122 0
+L0 32 103
+Z8 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z9 !s108 1673285526.000000
+!s107 comb_logic.svo|
+Z10 !s90 -reportprogress|300|-sv|-work|work|+incdir+.|comb_logic.svo|
+!i113 1
+Z11 o-sv -work work
+Z12 !s92 -sv -work work +incdir+.
+Z13 tCvgOpt 0
+vhard_block
+R1
+R2
+!i10b 1
+!s100 G[l^a@Q7^dOTV<??0E>YO0
+R3
+IHJm1UNfO_ikLz4l:0G_QM2
+R4
+S1
+R0
+R5
+R6
+R7
+!i122 0
+L0 136 34
+R8
+r1
+!s85 0
+31
+R9
+Z14 !s107 comb_logic.svo|
+R10
+!i113 1
+R11
+R12
+R13
