@@ -7,7 +7,11 @@ genvar i;
 generate 
  for (i=0; i<N; i=i+1) 
  begin : i_loop1
-	not ui (Y[i], X[i]);
+	if(i%2 == 0)
+		not ui (Y[i], X[i]);
+	//else
+		//continue
+		
  end
 endgenerate
 
