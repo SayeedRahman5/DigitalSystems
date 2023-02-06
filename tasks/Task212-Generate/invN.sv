@@ -9,9 +9,8 @@ generate
  begin : i_loop1
 	if(i%2 == 0)
 		not ui (Y[i], X[i]);
-	//else
-		//continue
-		
+	else if (i%2 != 0)
+		or ui (Y[i], X[i]);		
  end
 endgenerate
 
