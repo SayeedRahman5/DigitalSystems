@@ -374,6 +374,42 @@ https://fpgasoftware.intel.com/eula.
 	)
 	(annotation_block (parameter)(rect 880 448 1055 486))
 )
+(symbol
+	(rect 408 232 528 344)
+	(text "mux2_behavioural_v1" (rect 5 0 113 12)(font "Arial" ))
+	(text "inst4" (rect 8 96 30 113)(font "Intel Clear" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "a" (rect 0 0 5 12)(font "Arial" ))
+		(text "a" (rect 21 27 26 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "b" (rect 0 0 5 12)(font "Arial" ))
+		(text "b" (rect 21 43 26 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "s" (rect 0 0 5 12)(font "Arial" ))
+		(text "s" (rect 21 59 26 71)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64))
+	)
+	(port
+		(pt 120 32)
+		(output)
+		(text "out" (rect 0 0 15 12)(font "Arial" ))
+		(text "out" (rect 87 27 102 39)(font "Arial" ))
+		(line (pt 120 32)(pt 104 32))
+	)
+	(drawing
+		(rectangle (rect 16 16 104 96))
+	)
+)
 (connector
 	(pt 176 88)
 	(pt 200 88)
@@ -486,12 +522,38 @@ https://fpgasoftware.intel.com/eula.
 	(pt 760 520)
 )
 (connector
-	(text "key0" (rect 194 248 217 265)(font "Intel Clear" ))
-	(pt 184 264)
-	(pt 296 264)
+	(pt 528 264)
+	(pt 592 264)
 )
 (connector
-	(text "CK2" (rect 754 160 774 177)(font "Intel Clear" ))
+	(pt 592 264)
+	(pt 592 176)
+)
+(connector
+	(text "CK1" (rect 370 248 390 265)(font "Intel Clear" ))
+	(pt 408 264)
+	(pt 360 264)
+)
+(connector
+	(text "CK2" (rect 370 264 390 281)(font "Intel Clear" ))
+	(pt 408 280)
+	(pt 360 280)
+)
+(connector
+	(text "key0" (rect 194 248 217 265)(font "Intel Clear" ))
+	(pt 320 264)
+	(pt 184 264)
+)
+(connector
+	(pt 320 264)
+	(pt 320 296)
+)
+(connector
+	(pt 320 296)
+	(pt 408 296)
+)
+(connector
+	(text "led[0]" (rect 754 160 782 177)(font "Intel Clear" ))
 	(pt 592 176)
 	(pt 824 176)
 )
