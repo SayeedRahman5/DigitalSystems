@@ -399,6 +399,41 @@ https://fpgasoftware.intel.com/eula.
 	)
 	(annotation_block (parameter)(rect 656 -32 831 6))
 )
+(symbol
+	(rect 488 368 672 448)
+	(text "counterN" (rect 5 0 49 12)(font "Arial" ))
+	(text "inst2" (rect 8 64 30 81)(font "Intel Clear" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "CLK" (rect 0 0 21 12)(font "Arial" ))
+		(text "CLK" (rect 21 27 42 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "N_RESET" (rect 0 0 49 12)(font "Arial" ))
+		(text "N_RESET" (rect 21 43 70 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 184 32)
+		(output)
+		(text "Y[N-1..0]" (rect 0 0 46 12)(font "Arial" ))
+		(text "Y[N-1..0]" (rect 125 27 171 39)(font "Arial" ))
+		(line (pt 184 32)(pt 168 32)(line_width 3))
+	)
+	(parameter
+		"N"
+		"8"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(drawing
+		(rectangle (rect 16 16 168 64))
+	)
+	(annotation_block (parameter)(rect 704 304 880 344))
+)
 (connector
 	(pt 176 88)
 	(pt 200 88)
@@ -471,11 +506,6 @@ https://fpgasoftware.intel.com/eula.
 	(pt 232 312)
 )
 (connector
-	(text "key0" (rect 162 488 185 505)(font "Intel Clear" ))
-	(pt 152 504)
-	(pt 264 504)
-)
-(connector
 	(text "led[1]" (rect 978 328 1006 345)(font "Intel Clear" ))
 	(pt 968 344)
 	(pt 1048 344)
@@ -533,7 +563,41 @@ https://fpgasoftware.intel.com/eula.
 	(pt 312 544)
 	(pt 352 544)
 )
+(connector
+	(pt 728 160)
+	(pt 728 256)
+)
+(connector
+	(pt 728 256)
+	(pt 400 256)
+)
+(connector
+	(text "key0" (rect 162 488 185 505)(font "Intel Clear" ))
+	(pt 400 504)
+	(pt 152 504)
+)
+(connector
+	(pt 400 256)
+	(pt 400 400)
+)
+(connector
+	(pt 400 400)
+	(pt 488 400)
+)
+(connector
+	(pt 400 504)
+	(pt 400 416)
+)
+(connector
+	(pt 400 416)
+	(pt 488 416)
+)
+(connector
+	(pt 488 416)
+	(pt 496 416)
+)
 (junction (pt 520 40))
+(junction (pt 488 416))
 (text "LEDs" (rect 1296 536 1325 555)(font "Intel Clear" (font_size 8)))
 (text "Push Switches (Push for LOW)" (rect 96 584 270 603)(font "Intel Clear" (font_size 8)))
 (text "DIP Switches" (rect 168 408 244 427)(font "Intel Clear" (font_size 8)))
