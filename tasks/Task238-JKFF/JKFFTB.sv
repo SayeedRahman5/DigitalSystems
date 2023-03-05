@@ -1,14 +1,14 @@
-module jkff_tb;
+module JKFFTB;
 
 logic J,K,CLK,Q;
 
 //Instantiate Unit Under Test (UUT)
-jkff u1(Q,J,K,CLK);
+JKFLIPFLOP u1(Q,J,K,CLK);
 
 initial
 begin
 	CLK = 0;
-	repeat(50) begin
+	repeat(20) begin
 		#50ps;
 		CLK = ~CLK;
 	end
@@ -50,8 +50,28 @@ initial begin
 	// Latch
 	@(posedge CLK);
 	{J,K} = 2'b00;
-	@(negedge CLK);	
+	@(negedge CLK);
+
+	@(posedge CLK);
+	{J,K} = 2'b11;
+	@(negedge CLK);
+	@(posedge CLK);
+	@(negedge CLK);
+	@(posedge CLK);
+	@(negedge CLK);
+	@(posedge CLK);
+	@(negedge CLK);
+	@(posedge CLK);
+	@(negedge CLK);
+	@(posedge CLK);
+	@(negedge CLK);
+	@(posedge CLK);
+	@(negedge CLK);
+	@(posedge CLK);
+	@(negedge CLK);
+	@(posedge CLK);
+	@(negedge CLK);
+		
 end
 
 endmodule
-
