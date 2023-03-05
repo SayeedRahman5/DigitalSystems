@@ -1,0 +1,61 @@
+module srgatetestbench;
+
+//Internal signals
+logic Q, Qbar, S, R;
+srgate u1 (Q, Qbar, S, R); //instantiate and connect signals
+
+
+initial
+begin //allows the use of === so can test for conditions that arent 0 or 1
+
+//Initial State
+#10;
+assert(Q === 1'bx) $display("Pass"); else $error("fail");
+assert(Qbar === 1'bx) $display("Pass"); else $error("fail");
+
+//Initial state 00
+{S,R} = 2'b00;
+#10;
+assert(Q === 1'bx) $display("Pass"); else $error("fail");
+assert(Qbar === 1'bx) $display("Pass"); else $error("fail");
+//S=1
+{S,R} = 2'b10;
+#10;
+assert(Q === 1'b1) $display("Pass"); else $error("fail");
+assert(Qbar === 1'b0) $display("Pass"); else $error("fail");
+//Latched with S
+{S,R} = 2'b00;
+#10;
+assert(Q === 1'b1) $display("Pass"); else $error("fail");
+assert(Qbar === 1'b0) $display("Pass"); else $error("fail");
+//R=1
+{S,R} = 2'b01;
+#10;
+assert(Q === 1'b0) $display("Pass"); else $error("fail");
+assert(Qbar === 1'b1) $display("Pass"); else $error("fail");
+//Latched with R
+{S,R} = 2'b00;
+#10;
+assert(Q === 1'b0) $display("Pass"); else $error("fail");
+assert(Qbar === 1'b1) $display("Pass"); else $error("fail");
+//Illegal conditions
+{S,R} = 2'b11;
+#10;
+assert(Q === 1'bz) $display("Pass"); else $error("fail");
+assert(Qbar === 1'bz) $display("Pass"); else $error("fail");
+end
+
+//This block only runs when S or R **change**
+always @(S,R)
+begin
+	$display("{S,R}={%b,%b}", S, R);
+end
+
+//This block only runs when Q changes
+always @(Q)
+begin
+	$display("Q => %b", Q);
+end
+
+
+endmodule
