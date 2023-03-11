@@ -1,4 +1,4 @@
-module fsm_tb;
+module fsm_tb_solution;
 
 logic clk, x, reset, Q_moore, Q_mealy;
 
