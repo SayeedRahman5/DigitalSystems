@@ -16,6 +16,23 @@ typedef enum int unsigned { S0 = 32'b00000001, S1 = 32'b00000011,
 									 S6 = 32'b01111111, S7 = 32'b11111111 }  STATE_t;
 STATE_t state, next_state;
 
+function STATE_t nextState(input STATE_t s);
+begin
+	if (s == state.last())
+		nextState = state.last();
+	else
+		nextState = s.next();
+end
+endfunction
+
+function STATE_t prevState(input STATE_t s);
+begin
+	if (s == state.first())
+		prevState = state.first();
+	else
+		prevState = s.prev();
+end
+endfunction
 
 initial begin
 	state = S0;
@@ -27,12 +44,10 @@ always_comb begin : next_state_logic
 	next_state = state;
 	
 	//Conditionally update state
-	
-	//WRITE NEXT STATE LOGIC HERE HERE
-	
-	// hint - state.next() and state.prev() are useful
-	
-	// See https://www.chipverify.com/systemverilog/systemverilog-enumeration
+	if (UP_PULSE)
+		next_state = nextState(state);
+	else if (DOWN_PULSE) 
+		next_state = prevState(state);
 		
 	
 end
